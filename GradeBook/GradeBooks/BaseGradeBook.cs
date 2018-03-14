@@ -18,10 +18,15 @@ namespace GradeBook.GradeBooks
             get;
             set;
         }
-
-        public BaseGradeBook(string name)
+        public bool IsWeighted
+        {
+            get;
+            set;
+        }
+        public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
+            this.IsWeighted = isWeighted;
             Students = new List<Student>();
         }
 
